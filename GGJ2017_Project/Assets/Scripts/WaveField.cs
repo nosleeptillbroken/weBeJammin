@@ -6,6 +6,8 @@ public class WaveField : MonoBehaviour {
     // Terrain object
     Terrain terrain;
 
+    TerrainData data { get { return terrain.terrainData; } }
+
     // Resource acquisition
     void Awake()
     {
@@ -20,7 +22,7 @@ public class WaveField : MonoBehaviour {
             float pi2 = Mathf.PI * 2;
             float stepSize = 0.05f;
             
-            float[,] heightmap = terrain.terrainData.GetHeights(0, 0, terrain.terrainData.heightmapWidth, terrain.terrainData.heightmapHeight);
+            float[,] heightmap = data.GetHeights(0, 0, data.heightmapWidth, data.heightmapHeight);
 
             int waveFrames = Mathf.Max(waveObject.framesAlive, 4);
 
@@ -30,7 +32,7 @@ public class WaveField : MonoBehaviour {
             {
                 float percentageOfFrames = ((float)i / (float)waveFrames);
 
-                float totalRadius = waveObject.waveCollider.radius * 0.8f;
+                float totalRadius = waveObject.waveCollider.radius * 0.75f;
                 float currentRadius = percentageOfFrames * totalRadius;
 
                 float waveHeight = Mathf.Cos(Mathf.PI*2f + percentageOfFrames * Mathf.PI*2f)/2;
@@ -44,7 +46,7 @@ public class WaveField : MonoBehaviour {
 
                     int[] coord = WorldspaceToHeightmapCoord(waveObject.transform.position + new Vector3(x,0,z));
 
-                    if (coord[1] < terrain.terrainData.heightmapWidth && coord[0] < terrain.terrainData.heightmapHeight
+                    if (coord[1] < data.heightmapWidth && coord[0] < data.heightmapHeight
                         &&
                         coord[1] >= 0 && coord[0] >= 0)
                     {
@@ -55,6 +57,26 @@ public class WaveField : MonoBehaviour {
 
             terrain.terrainData.SetHeightsDelayLOD(0,0,heightmap);
         }
+    }
+
+    void OnApplicationQuit()
+    {
+        ResetHeightmap();
+    }
+
+    public void ResetHeightmap()
+    {
+        float[,] heightmap = data.GetHeights(0, 0, data.heightmapWidth, data.heightmapHeight);
+
+        for (int i = 0; i < heightmap.GetLength(0); i++)
+        {
+            for (int j = 0; j < heightmap.GetLength(1); j++)
+            {
+                heightmap[i, j] = 0.5f;
+            }
+        }
+
+        data.SetHeightsDelayLOD(0, 0, heightmap);
     }
 
     public int[] WorldspaceToHeightmapCoord(Vector3 worldspaceCoord)
