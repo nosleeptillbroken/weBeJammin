@@ -4,7 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Environment
+  - UI
+  - Audio
+  - Terrain
+  - Boulder
+  - Obstacle
+  - Enemy
+  - Node
+  - Region
   layers:
   - Default
   - TransparentFX
@@ -20,8 +27,8 @@ TagManager:
   - Obstacles
   - Terrain
   - Waves
-  - 
-  - 
+  - Nodes
+  - Regions
   - 
   - 
   - 
