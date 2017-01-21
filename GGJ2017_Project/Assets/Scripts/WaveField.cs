@@ -22,7 +22,7 @@ public class WaveField : MonoBehaviour {
             
             float[,] heightmap = terrain.terrainData.GetHeights(0, 0, terrain.terrainData.heightmapWidth, terrain.terrainData.heightmapHeight);
 
-            int waveFrames = Mathf.Max(waveObject.framesAlive, 8);
+            int waveFrames = Mathf.Max(waveObject.framesAlive, 4);
 
             float normalizedLife = Mathf.Clamp01(Mathf.Log(waveObject.life) + 1.1f) / waveObject.initialLife;
 
@@ -30,7 +30,7 @@ public class WaveField : MonoBehaviour {
             {
                 float percentageOfFrames = ((float)i / (float)waveFrames);
 
-                float totalRadius = waveObject.waveCollider.radius;
+                float totalRadius = waveObject.waveCollider.radius * 0.8f;
                 float currentRadius = percentageOfFrames * totalRadius;
 
                 float waveHeight = Mathf.Cos(percentageOfFrames * Mathf.PI*2.5f)/2;
