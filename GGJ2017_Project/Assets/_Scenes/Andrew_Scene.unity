@@ -129,26 +129,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 54000010846113786, guid: 76e151bdaa5ba9340a7f885c72bf18cd,
-        type: 2}
-      propertyPath: m_Drag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 54000010846113786, guid: 76e151bdaa5ba9340a7f885c72bf18cd,
-        type: 2}
-      propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 54000010846113786, guid: 76e151bdaa5ba9340a7f885c72bf18cd,
-        type: 2}
-      propertyPath: m_Mass
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 54000010846113786, guid: 76e151bdaa5ba9340a7f885c72bf18cd,
-        type: 2}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 76e151bdaa5ba9340a7f885c72bf18cd, type: 2}
   m_IsPrefabParent: 0
@@ -584,9 +564,9 @@ GameObject:
   - 154: {fileID: 1325334365}
   - 114: {fileID: 1325334369}
   - 65: {fileID: 1325334368}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
