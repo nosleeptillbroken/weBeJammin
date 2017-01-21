@@ -65,7 +65,6 @@ public class Enemy_Pygmy : MonoBehaviour
             target = home;
         }
 
-
         //Adjust directions to move and rotate.
         dirVec = Vector3.Normalize(toTarget);
         newDir = Vector3.RotateTowards(tf.forward, dirVec, rotStep, 0.0f);
@@ -90,6 +89,11 @@ public class Enemy_Pygmy : MonoBehaviour
             isHome = false;
     }
 
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Boulder")
+            Destroy(gameObject);
+    }
 
 }
 
