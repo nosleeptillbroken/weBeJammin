@@ -16,6 +16,8 @@ public class CameraController : MonoBehaviour
 
     private float y = 0f;
 
+    private Vector3 initialVector;
+
     void Awake()
     {
         // Get the Rewired Player object for this player and keep it for the duration of the character's lifetime
@@ -26,6 +28,8 @@ public class CameraController : MonoBehaviour
     void Start ()
 	{
 	    Vector3 angles = transform.eulerAngles;
+        initialVector = transform.position - target.position;
+        initialVector.y = 0;
 	    
 	    y = angles.y;
 
@@ -39,10 +43,16 @@ public class CameraController : MonoBehaviour
     {
         if (Mathf.Abs(player.GetAxis("Tilt")) > 0.02f)
         {
+            Vector3 currentAngles = transform.rotation.eulerAngles;
+
+            if ((currentAngles.x < 1f && player.GetAxis("Tilt") < 0) || (currentAngles.x > 45f && player.GetAxis("Tilt") > 0))
+                return;
+
             transform.RotateAround(target.position, transform.right,  player.GetAxis("Tilt") * ySpeed * Time.deltaTime);
         }
     }
 
+    /*
     void LateUpdate()
     {
             
@@ -58,6 +68,7 @@ public class CameraController : MonoBehaviour
             //transform.position = position;
             
     }
+    */
 
     static float ClampAngle(float angle, float min, float max)
     {
