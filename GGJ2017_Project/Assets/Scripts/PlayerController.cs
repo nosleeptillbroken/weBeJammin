@@ -49,4 +49,9 @@ public class PlayerController : MonoBehaviour {
 
         }
     }
+
+    private void Move(Vector3 direction)
+    {
+
+    }
 }
