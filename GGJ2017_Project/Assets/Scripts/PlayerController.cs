@@ -42,4 +42,9 @@ public class PlayerController : MonoBehaviour {
             Debug.Log("Jumping");
         }
     }
+
+    private void Move(Vector3 direction)
+    {
+
+    }
 }
