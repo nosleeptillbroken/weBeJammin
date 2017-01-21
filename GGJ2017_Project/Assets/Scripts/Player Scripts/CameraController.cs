@@ -9,11 +9,11 @@ public class CameraController : MonoBehaviour
 
     public Transform target;
     private float distance = 5f;
-    private float xSpeed = 125f;
-    private float ySpeed = 80f;
+   
+    private float ySpeed = 25f;
     private float yMinLimit = 3f;
     private float yMaxLimit = 30f;
-    private float x = 0f;
+
     private float y = 0f;
 
     void Awake()
@@ -26,7 +26,7 @@ public class CameraController : MonoBehaviour
     void Start ()
 	{
 	    Vector3 angles = transform.eulerAngles;
-	    x = angles.x;
+	    
 	    y = angles.y;
 
 	    if (GetComponent<Rigidbody>() == true)
@@ -37,24 +37,26 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        if (player.GetAxis("Pan") > 0)
+        if (Mathf.Abs(player.GetAxis("Tilt")) > 0.02f)
         {
-            //Debug.Log("Panning right");
+            transform.RotateAround(target.position, transform.right,  player.GetAxis("Tilt") * ySpeed * Time.deltaTime);
         }
     }
 
     void LateUpdate()
     {
-            x += player.GetAxis("Pan") * xSpeed * 0.02f;
+            
             y += player.GetAxis("Tilt") * ySpeed * 0.02f;
 
             y = ClampAngle(y, yMinLimit, yMaxLimit);
 
-            Quaternion rotation = Quaternion.Euler(y, x, 0);
+            Quaternion rotation = Quaternion.Euler(y, 0, 0);
             Vector3 position = rotation * new Vector3(0f, 0f, -distance) + target.position;
 
-            transform.rotation = rotation;
-            transform.position = position;
+
+            //transform.rotation = rotation;
+            //transform.position = position;
+            
     }
 
     static float ClampAngle(float angle, float min, float max)

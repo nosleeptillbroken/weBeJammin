@@ -5,8 +5,10 @@ using Rewired;
 public class PlayerController : MonoBehaviour {
 
     public int playerId = 0; // The Rewired player id of this character
-
+    private float xSpeed = 30f;
     public float moveSpeed = 0.25f;
+
+    private float x = 0f;
 
     private Player player; // The Rewired Player
     private bool jump;
@@ -16,16 +18,27 @@ public class PlayerController : MonoBehaviour {
         player = ReInput.players.GetPlayer(playerId);
     }
 
+    void Start()
+    {
+        Vector3 angles = transform.eulerAngles;
+        x = angles.x;
+    }
+
     void Update () {
         ProcessInput();
     }
 
-   
+    void LateUpdate()
+    {
+        //x += player.GetAxis("Pan") * xSpeed * 0.02f;
+        
+    }
 
     private void ProcessInput() {
-        Vector3 Move = new Vector3(player.GetAxis("Strafe"), 0f, player.GetAxis("Move"));
-        GetComponent<Rigidbody>().velocity = Move * moveSpeed; //player moves left or right
+       Vector3 Move = ((transform.right * player.GetAxis("Strafe")) * moveSpeed) + ((transform.forward * player.GetAxis("Move")) * moveSpeed);
 
+        GetComponent<Rigidbody>().velocity = Move; //player moves left or right
+        transform.Rotate(0f, player.GetAxis("Pan") * xSpeed * Time.deltaTime, 0f);
 
         if (player.GetButtonDown("Jump")) //player jumps
         {
