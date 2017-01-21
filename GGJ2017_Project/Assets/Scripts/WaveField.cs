@@ -33,7 +33,7 @@ public class WaveField : MonoBehaviour {
                 float totalRadius = waveObject.waveCollider.radius * 0.8f;
                 float currentRadius = percentageOfFrames * totalRadius;
 
-                float waveHeight = Mathf.Cos(percentageOfFrames * Mathf.PI*2.5f)/2;
+                float waveHeight = Mathf.Cos(Mathf.PI*2f + percentageOfFrames * Mathf.PI*2f)/2;
                 waveHeight *= normalizedLife;
                 waveHeight += 0.5f;
 
@@ -44,7 +44,12 @@ public class WaveField : MonoBehaviour {
 
                     int[] coord = WorldspaceToHeightmapCoord(waveObject.transform.position + new Vector3(x,0,z));
 
-                    heightmap[coord[1], coord[0]] = waveHeight;
+                    if (coord[1] < terrain.terrainData.heightmapWidth && coord[0] < terrain.terrainData.heightmapHeight
+                        &&
+                        coord[1] >= 0 && coord[0] >= 0)
+                    {
+                        heightmap[coord[1], coord[0]] = waveHeight;
+                    }
                 }
             }
 
