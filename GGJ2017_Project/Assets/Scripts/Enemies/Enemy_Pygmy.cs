@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 using System.Collections;
 
 public class Enemy_Pygmy : MonoBehaviour
@@ -10,13 +11,20 @@ public class Enemy_Pygmy : MonoBehaviour
     //External References.
     Transform player;
     Transform target;
+    public Transform home;
+    public bool isHome;
 
-    //
+    //Vector Calculations.
     Vector3 playerLocat;
     Vector3 dirVec;
     Vector3 toPlayer;
+    Vector3 toHome;
     Vector3 toTarget;
     Vector3 newDir;
+
+    //Region and Node Calculations.
+    public int myRegion;
+    public int playerRegion;
 
     //Metrics.
     private float movSpeed = 2;
@@ -32,30 +40,63 @@ public class Enemy_Pygmy : MonoBehaviour
 
         //External references set.
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        
-	}
+
+        //Calculate where to move to.
+        playerRegion = 2;
+    }
 	
 	
 	void Update ()
     {
+        //Refreshed every frame.
         movStep = Time.deltaTime * movSpeed;
         rotStep = Time.deltaTime * rotSpeed;
-
         playerLocat = player.position;
-
-        //Vector calculations.
         toPlayer = playerLocat - tf.position;
-        toTarget = toPlayer;
+        toHome = home.position - tf.position;
 
+        //If the player is present, move to the player.
+        if (playerRegion == myRegion) {
+            toTarget = toPlayer;
+            target = player;
+        }
+        else {
+            toTarget = toHome;
+            target = home;
+        }
+
+        //Adjust directions to move and rotate.
         dirVec = Vector3.Normalize(toTarget);
         newDir = Vector3.RotateTowards(tf.forward, dirVec, rotStep, 0.0f);
 
-        tf.position = Vector3.MoveTowards(tf.position, playerLocat, movStep);
-        tf.rotation = Quaternion.LookRotation(newDir);
-        
+        //Position adjusted.
+        if (myRegion == playerRegion || isHome == false) {
+            tf.position = Vector3.MoveTowards(tf.position, target.position, movStep);
+            tf.rotation = Quaternion.LookRotation(newDir);
+        }
 
-        
-        
-        //Debug.Log(dirVec);
 	}
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "PygmyHome")
+            isHome = true;
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "PygmyHome")
+            isHome = false;
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Boulder")
+            Destroy(gameObject);
+    }
+
 }
+
+
+
+

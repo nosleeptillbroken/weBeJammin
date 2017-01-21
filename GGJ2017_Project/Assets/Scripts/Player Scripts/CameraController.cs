@@ -8,7 +8,7 @@ public class CameraController : MonoBehaviour
     public int playerId = 0; // The Rewired player id of this character
 
     public Transform target;
-    private float distance = 5f;
+    private float offset = 4f;
    
     private float ySpeed = 100f;
     private float yMinLimit = 3f;
@@ -46,7 +46,7 @@ public class CameraController : MonoBehaviour
             if ((currentAngles.x < yMinLimit && player.GetAxis("Tilt") < 0) || (currentAngles.x > yMaxLimit && player.GetAxis("Tilt") > 0))
                 return;
 
-            transform.RotateAround(target.position, transform.right,  player.GetAxis("Tilt") * ySpeed * Time.deltaTime);
+            transform.RotateAround(target.position + new Vector3(0f, offset, 0f), (transform.right),  player.GetAxis("Tilt") * ySpeed * Time.deltaTime);
         }
     }
 
