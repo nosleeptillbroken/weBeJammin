@@ -1,34 +1,26 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PowerControl : MonoBehaviour
 {
-    public int power = 0;
-    int maxPower = 100;
-    
-    private int increase()
+    public int startingPower = 0;
+    public int currentPower;
+    public int maxPower = 100;
+    public Slider PowerSlider;
+	
+    void Awake()
     {
-        power += 1;
-        return power;
+        currentPower = startingPower;
     }
 
-    private int decrease()
-    {
-        power -= 1;
-        return power;
-    }
-	
 	// Update is called once per frame
 	void Update ()
     {
-	    if(Input.GetButton("Fire") && power <= maxPower)
+        while (Input.GetKey(KeyCode.N))
         {
-            increase();
-        }
-        else
-        {
-            decrease();
+            currentPower = currentPower + 1;
         }
 
-	}
+    }
 }
