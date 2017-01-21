@@ -121,7 +121,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 20}
-  m_Center: {x: 5, y: 0, z: 9.5}
+  m_Center: {x: 2, y: 0, z: 9.5}
 --- !u!114 &114000010778139136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
-  fire: {fileID: 0}
+  fire: {fileID: 198000012560446646}
 --- !u!198 &198000012560446646
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -181,7 +181,7 @@ ParticleSystem:
   speed: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   moveWithTransform: 1
   autoRandomSeed: 1
   scalingMode: 1
