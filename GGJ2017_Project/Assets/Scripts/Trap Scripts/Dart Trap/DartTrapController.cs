@@ -31,15 +31,16 @@ public class DartTrapController : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if(other.gameObject.tag == "Player")
         {
+            Debug.Log("hit");
             isActive = true;
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             isActive = false;
         }
