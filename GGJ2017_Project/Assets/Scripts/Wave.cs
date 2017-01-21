@@ -13,12 +13,15 @@ public class Wave : MonoBehaviour {
     public float rateOfExpansion = 1.0f;
 
     // The sphere collider component
-    public CapsuleCollider waveCollider;
+    public SphereCollider waveCollider;
+
+    //
+    public int framesAlive = 0;
 
     // Resource acquisition
     void Awake ()
     {
-        waveCollider = GetComponent<CapsuleCollider>();
+        waveCollider = GetComponent<SphereCollider>();
     }
 
 	// Use this for initialization
@@ -32,7 +35,7 @@ public class Wave : MonoBehaviour {
     {
         waveCollider.radius += rateOfExpansion * Time.deltaTime;
 
-        life -= Time.deltaTime;
+        life -= Time.deltaTime; framesAlive++;
         if(life <= 0.0f) Destroy(this.gameObject);
 	}
 }

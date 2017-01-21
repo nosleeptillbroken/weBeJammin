@@ -17,21 +17,38 @@ public class WaveField : MonoBehaviour {
         Wave waveObject = other.gameObject.GetComponent<Wave>();
         if(waveObject != null)
         {
-            float stepSize = 0.01f;
+            float pi2 = Mathf.PI * 2;
+            float stepSize = 0.05f;
+            
+            float[,] heightmap = terrain.terrainData.GetHeights(0, 0, terrain.terrainData.heightmapWidth, terrain.terrainData.heightmapHeight);
 
-            float waveHeight = 1.0f * (waveObject.life / waveObject.initialLife);
+            int waveFrames = Mathf.Max(waveObject.framesAlive, 8);
 
-            for (float theta = 0; theta < 2*Mathf.PI; theta += stepSize)
+            float normalizedLife = Mathf.Clamp01(Mathf.Log(waveObject.life) + 1.1f) / waveObject.initialLife;
+
+            for (int i = 0; i < waveFrames; i++)
             {
-                float x = waveObject.waveCollider.radius * Mathf.Cos(theta);
-                float z = waveObject.waveCollider.radius * Mathf.Sin(theta);
+                float percentageOfFrames = ((float)i / (float)waveFrames);
 
-                int[] terrainCoord = WorldspaceToHeightmapCoord(waveObject.transform.position + new Vector3(x,0,z));
+                float totalRadius = waveObject.waveCollider.radius;
+                float currentRadius = percentageOfFrames * totalRadius;
 
-                float[,] vals = { { waveHeight }, { waveHeight } };
-                terrain.terrainData.SetHeightsDelayLOD(terrainCoord[0], terrainCoord[1], vals);
+                float waveHeight = Mathf.Cos(percentageOfFrames * Mathf.PI*2.5f)/2;
+                waveHeight *= normalizedLife;
+                waveHeight += 0.5f;
+
+                for (float theta = 0; theta < pi2; theta += stepSize)
+                {
+                    float x = currentRadius * Mathf.Cos(theta);
+                    float z = currentRadius * Mathf.Sin(theta);
+
+                    int[] coord = WorldspaceToHeightmapCoord(waveObject.transform.position + new Vector3(x,0,z));
+
+                    heightmap[coord[1], coord[0]] = waveHeight;
+                }
             }
-                        
+
+            terrain.terrainData.SetHeightsDelayLOD(0,0,heightmap);
         }
     }
 
