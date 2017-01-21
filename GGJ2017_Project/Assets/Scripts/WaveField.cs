@@ -14,7 +14,7 @@ public class WaveField : MonoBehaviour {
         terrain = GetComponent<Terrain>();
     }
 	
-    void OnCollisionStay(Collision other)
+    void OnTriggerStay(Collider other)
     {
         Wave waveObject = other.gameObject.GetComponent<Wave>();
         if(waveObject != null)

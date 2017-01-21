@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Wave : MonoBehaviour {
 
+    // Max possible force applied
+    public float maxForce = 10f;
+
     // Initial life of the wave (in seconds)
     public float initialLife = 1.0f;
 
@@ -38,4 +41,23 @@ public class Wave : MonoBehaviour {
         life -= Time.deltaTime; framesAlive++;
         if(life <= 0.0f) Destroy(this.gameObject);
 	}
+
+    // This applies a force that decays based on the distance it is applied from
+    private void OnTriggerStay(Collider other)
+    {
+        // Only apply to some objects
+        if (other.CompareTag("Boulder"))
+        {
+            // Get normalized direction to apply force in
+            Vector3 dir = (other.transform.position - transform.position);
+            dir.Normalize();
+
+            // Get the percentage of force to apply, 100% being at the same location
+            float dist = Vector3.Distance(transform.position, other.transform.position);
+            float linDecay = 1f / dist;
+
+            // Apply this force to the other thing
+            other.GetComponent<Rigidbody>().AddForce(dir * maxForce * linDecay);
+        }
+    }
 }
