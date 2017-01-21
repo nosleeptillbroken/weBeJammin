@@ -16,6 +16,7 @@ TagManager:
   - Ball
   - AIManager
   - PygmyHome
+  - WallGuard
   layers:
   - Default
   - TransparentFX
