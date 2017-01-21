@@ -35,7 +35,7 @@ public class WaveField : MonoBehaviour {
                 float totalRadius = waveObject.waveCollider.radius * 0.75f;
                 float currentRadius = percentageOfFrames * totalRadius;
 
-                float waveHeight = Mathf.Cos(Mathf.PI*2f + percentageOfFrames * Mathf.PI*2f)/2;
+                float waveHeight = Mathf.Cos(percentageOfFrames * Mathf.PI*2f)/2;
                 waveHeight *= normalizedLife;
                 waveHeight += 0.5f;
 
