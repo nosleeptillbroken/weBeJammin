@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour
     public Transform target;
     private float distance = 5f;
    
-    private float ySpeed = 25f;
+    private float ySpeed = 100f;
     private float yMinLimit = 3f;
     private float yMaxLimit = 30f;
 
@@ -27,11 +27,9 @@ public class CameraController : MonoBehaviour
     // Use this for initialization
     void Start ()
 	{
-	    Vector3 angles = transform.eulerAngles;
-        initialVector = transform.position - target.position;
-        initialVector.y = 0;
+	    //Vector3 angles = transform.eulerAngles;
 	    
-	    y = angles.y;
+	    //y = angles.y;
 
 	    if (GetComponent<Rigidbody>() == true)
 	    {
@@ -45,32 +43,15 @@ public class CameraController : MonoBehaviour
         {
             Vector3 currentAngles = transform.rotation.eulerAngles;
 
-            if ((currentAngles.x < 1f && player.GetAxis("Tilt") < 0) || (currentAngles.x > 45f && player.GetAxis("Tilt") > 0))
+            if ((currentAngles.x < yMinLimit && player.GetAxis("Tilt") < 0) || (currentAngles.x > yMaxLimit && player.GetAxis("Tilt") > 0))
                 return;
 
             transform.RotateAround(target.position, transform.right,  player.GetAxis("Tilt") * ySpeed * Time.deltaTime);
         }
     }
 
-    /*
-    void LateUpdate()
-    {
-            
-            y += player.GetAxis("Tilt") * ySpeed * 0.02f;
 
-            y = ClampAngle(y, yMinLimit, yMaxLimit);
-
-            Quaternion rotation = Quaternion.Euler(y, 0, 0);
-            Vector3 position = rotation * new Vector3(0f, 0f, -distance) + target.position;
-
-
-            //transform.rotation = rotation;
-            //transform.position = position;
-            
-    }
-    */
-
-    static float ClampAngle(float angle, float min, float max)
+    static float ClampAngle(float angle, float min, float max) //was used to clamp player tilt rotation
     {
         if (angle < -360)
             angle += 360;
