@@ -20,7 +20,7 @@ public class WaveField : MonoBehaviour {
         if(waveObject != null)
         {
             float PI_2 = Mathf.PI * 2;
-            float stepSize = 0.1f;
+            float stepSize = 0.05f;
 
             float totalRadius = waveObject.waveCollider.radius * 0.75f;
 
