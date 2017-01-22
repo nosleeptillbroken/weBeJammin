@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using Rewired;
 
@@ -17,6 +18,9 @@ public class PlayerController : MonoBehaviour
     public GameObject wavePrefab;
 
     private Animator anim;
+
+    [SerializeField]
+    private float deathWait = 5f;
 
     void Awake()
     {
@@ -87,22 +91,36 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // Hit an enemy?
         if (other.CompareTag("Enemy"))
-            Debug.Log("Killem");
+        { 
+            StartCoroutine(killMe());
+            transform.GetComponent<Rigidbody>().freezeRotation = false;
+        }
 
+        // Hit a boulder?
         if (other.CompareTag("Boulder"))
         {
             Vector3 d = transform.position - other.transform.position;
             Vector3 v = other.GetComponent<Rigidbody>().velocity;
 
-            Debug.Log(Vector3.Angle(d, v));
-            if (Vector3.Dot(d, v) <= 0)
-                Debug.Log("Killem");
+            if ((Vector3.Angle(d, v)) < 90)
+            {
+                StartCoroutine(killMe());
+                transform.GetComponent<Rigidbody>().freezeRotation = false;
+            }
         }
+
         if(other.CompareTag("Region"))
         {
             playerRegion = other.gameObject.GetComponent<Region>().ID;
         }
+    }
+
+    IEnumerator killMe()
+    {
+        yield return new WaitForSeconds(deathWait);
+        SceneManager.LoadScene("Game_Over");
     }
 
     private void OnTriggerExit(Collider other)
