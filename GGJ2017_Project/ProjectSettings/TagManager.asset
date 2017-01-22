@@ -12,6 +12,11 @@ TagManager:
   - Enemy
   - Node
   - Region
+  - Environment
+  - Ball
+  - AIManager
+  - PygmyHome
+  - WallGuard
   layers:
   - Default
   - TransparentFX

@@ -13,9 +13,9 @@ public class DartMover : MonoBehaviour {
         transform.Translate(0, 1, 0);
 	}
 
-    void OnCollisionEnter(Collider other)
+    void OnCollisionEnter(Collision other)
     {
-        if(other.tag == "Player")
+        if(other.gameObject.tag == "Player")
         {
             Destroy(other.gameObject);
         }
