@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
         //IsGrounded();
         anim.SetFloat("Speed",player.GetAxis("Move"));
         anim.SetBool("isGrounded",IsGrounded());
+        anim.SetFloat("Speed", player.GetAxis("Strafe"));
     }
 
     public void StopVibration()
