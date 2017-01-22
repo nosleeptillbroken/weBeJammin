@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
     {
         if (goalCount == goal)
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene("Victory_Scene");
         }
     }
 
