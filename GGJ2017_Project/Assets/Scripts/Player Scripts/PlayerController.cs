@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
 
     public int playerId = 0; // The Rewired player id of this character
+    public int playerRegion;
     private float xSpeed = 150f;
     public float moveSpeed = 0.50f;
     private float jumpTime;
@@ -97,6 +98,18 @@ public class PlayerController : MonoBehaviour
             Debug.Log(Vector3.Angle(d, v));
             if (Vector3.Dot(d, v) <= 0)
                 Debug.Log("Killem");
+        }
+        if(other.CompareTag("Region"))
+        {
+            playerRegion = other.gameObject.GetComponent<Region>().ID;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.CompareTag("Region"))
+        {
+            playerRegion = 0;
         }
     }
 
