@@ -12,8 +12,9 @@ public class Enemy_Pygmy : MonoBehaviour
     Transform player;
     PlayerController playerScript;
     Transform target;
-    public Transform home;
-    public bool isHome;
+    public Transform[] home;
+    public int homeIndex;
+    private Animator runAnim;
 
     //Vector Calculations.
     Vector3 playerLocat;
@@ -42,6 +43,7 @@ public class Enemy_Pygmy : MonoBehaviour
         //External references set.
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        runAnim = GetComponentInChildren<Animator>();
     }
 	
 	
@@ -52,7 +54,7 @@ public class Enemy_Pygmy : MonoBehaviour
         rotStep = Time.deltaTime * rotSpeed;
         playerLocat = player.position;
         toPlayer = playerLocat - tf.position;
-        toHome = home.position - tf.position;
+        toHome = home[homeIndex].position - tf.position;
         playerRegion = playerScript.playerRegion;
 
         //If the player is present, move to the player.
@@ -62,31 +64,27 @@ public class Enemy_Pygmy : MonoBehaviour
         }
         else {
             toTarget = toHome;
-            target = home;
+            target = home[homeIndex];
         }
 
         //Adjust directions to move and rotate.
         dirVec = Vector3.Normalize(toTarget);
         newDir = Vector3.RotateTowards(tf.forward, dirVec, rotStep, 0.0f);
 
-        //Position adjusted.
-        if (myRegion == playerRegion || isHome == false) {
-            tf.position = Vector3.MoveTowards(tf.position, target.position, movStep);
-            tf.rotation = Quaternion.LookRotation(newDir);
-        }
+        //Adjust position.
+        tf.position = Vector3.MoveTowards(tf.position, target.position, movStep);
+        tf.rotation = Quaternion.LookRotation(newDir);
 
 	}
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "PygmyHome")
-            isHome = true;
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "PygmyHome")
-            isHome = false;
+        if (other.gameObject.tag == "PygmyHome") {
+            if (homeIndex < 5)
+                homeIndex++;
+            else
+                homeIndex = 0;
+        }
     }
 
     void OnCollisionEnter(Collision other)
