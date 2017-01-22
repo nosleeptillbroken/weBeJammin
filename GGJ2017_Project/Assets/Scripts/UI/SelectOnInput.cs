@@ -7,6 +7,7 @@ public class SelectOnInput : MonoBehaviour
 
     public EventSystem eventSystem;
     public GameObject selectedObject;
+  
 
     private bool buttonSelected;
 
@@ -21,7 +22,7 @@ public class SelectOnInput : MonoBehaviour
     {
         if (Input.GetAxisRaw("Vertical") != 0 && buttonSelected == false)
         {
-            eventSystem.SetSelectedGameObject(selectedObject);
+            eventSystem.SetSelectedGameObject(selectedObject, new BaseEventData(EventSystem.current));
             buttonSelected = true;
         }
     }
