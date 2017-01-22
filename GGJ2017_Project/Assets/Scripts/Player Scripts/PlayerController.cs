@@ -71,6 +71,7 @@ public class PlayerController : MonoBehaviour
 
             if (jumpTime < 40f)
             {
+                anim.SetBool("isJumping", true);
                 float vibAmt = Mathf.PingPong(minVibeAmt, maxVibeAmt);
                 // Set vibration for a certain duration
                 foreach (Joystick j in player.controllers.Joysticks)
@@ -81,6 +82,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
+                anim.SetBool("isCharging", true);
                 // Set vibration for a certain duration
                 foreach (Joystick j in player.controllers.Joysticks)
                 {
@@ -104,11 +106,12 @@ public class PlayerController : MonoBehaviour
         if (player.GetButtonDown("Jump") && IsGrounded()) //player jumps
         {
             isJumping = true;
-            anim.SetBool("isJumping", true);
+            //anim.SetBool("isJumping", true);
         }
         if (player.GetButtonUp("Jump") && IsGrounded())
         {
             anim.SetBool("isJumping", false);
+            anim.SetBool("isCharging", false);
             StopVibration();
             isJumping = false;
             Move.y = 10.0f;
