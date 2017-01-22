@@ -46,9 +46,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        IsGrounded();
+        //IsGrounded();
         anim.SetFloat("Speed",player.GetAxis("Move"));
-        anim.SetBool("isJumping",IsGrounded());
+        anim.SetBool("isGrounded",IsGrounded());
     }
 
     public void StopVibration()
@@ -104,9 +104,11 @@ public class PlayerController : MonoBehaviour
         if (player.GetButtonDown("Jump") && IsGrounded()) //player jumps
         {
             isJumping = true;
+            anim.SetBool("isJumping", true);
         }
         if (player.GetButtonUp("Jump") && IsGrounded())
         {
+            anim.SetBool("isJumping", false);
             StopVibration();
             isJumping = false;
             Move.y = 10.0f;
