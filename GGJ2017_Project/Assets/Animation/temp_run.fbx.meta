@@ -268,7 +268,273 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Main_Character_Body
+        weight: 1
+      - path: total_ctrl
+        weight: 1
+      - path: total_ctrl/left_arm_ctrl
+        weight: 1
+      - path: total_ctrl/left_arm_ik
+        weight: 1
+      - path: total_ctrl/left_elbow_pole_vector
+        weight: 1
+      - path: total_ctrl/left_knee_pole_vector
+        weight: 1
+      - path: total_ctrl/left_leg_ctrl
+        weight: 1
+      - path: total_ctrl/left_leg_ctrl/left_reverse_heel
+        weight: 1
+      - path: total_ctrl/left_leg_ctrl/left_reverse_heel/left_reverse_toe
+        weight: 1
+      - path: total_ctrl/left_leg_ctrl/left_reverse_heel/left_reverse_toe/left_reverse_ball
+        weight: 1
+      - path: total_ctrl/left_leg_ctrl/left_reverse_heel/left_reverse_toe/left_reverse_ball/left_ball_ik
+        weight: 1
+      - path: total_ctrl/left_leg_ctrl/left_reverse_heel/left_reverse_toe/left_reverse_ball/left_reverse_ankle
+        weight: 1
+      - path: total_ctrl/left_leg_ctrl/left_reverse_heel/left_reverse_toe/left_reverse_ball/left_reverse_ankle/left_ankle_ik
+        weight: 1
+      - path: total_ctrl/left_leg_ctrl/left_reverse_heel/left_reverse_toe/left_toe_ik
+        weight: 1
+      - path: total_ctrl/master_root
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/pelvic_override
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/pelvic_override/left_hip_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/pelvic_override/left_hip_jnt/left_knee_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/pelvic_override/left_hip_jnt/left_knee_jnt/left_ankle_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/pelvic_override/left_hip_jnt/left_knee_jnt/left_ankle_jnt/left_ball_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/pelvic_override/left_hip_jnt/left_knee_jnt/left_ankle_jnt/left_ball_jnt/left_toe_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/pelvic_override/right_hip_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/pelvic_override/right_hip_jnt/right_knee_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/pelvic_override/right_hip_jnt/right_knee_jnt/right_ankle_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/pelvic_override/right_hip_jnt/right_knee_jnt/right_ankle_jnt/right_ball_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/pelvic_override/right_hip_jnt/right_knee_jnt/right_ankle_jnt/right_ball_jnt/right_toe_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/cervical_jnt_3
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/cervical_jnt_3/necK_base_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/cervical_jnt_3/necK_base_jnt/throat_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/cervical_jnt_3/necK_base_jnt/throat_jnt/head_base_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/cervical_jnt_3/necK_base_jnt/throat_jnt/head_base_jnt/orbital
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_hand_ctrl
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_index_carpal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_index_carpal/left_index_proximal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_index_carpal/left_index_proximal/left_index_middle
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_index_carpal/left_index_proximal/left_index_middle/left_index_distal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_index_carpal/left_index_proximal/left_index_middle/left_index_distal/left_index_tip
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_middle_carpal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_middle_carpal/left_middle_proximal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_middle_carpal/left_middle_proximal/left_middle_middle
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_middle_carpal/left_middle_proximal/left_middle_middle/left_middle_distal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_middle_carpal/left_middle_proximal/left_middle_middle/left_middle_distal/left_middle_tip
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_pinky_carpal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_pinky_carpal/left_pinky_proximal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_pinky_carpal/left_pinky_proximal/left_pinky_middle
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_pinky_carpal/left_pinky_proximal/left_pinky_middle/left_pinky_distal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_pinky_carpal/left_pinky_proximal/left_pinky_middle/left_pinky_distal/left_pinky_tip
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_ring_carpal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_ring_carpal/left_ring_proximal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_ring_carpal/left_ring_proximal/left_ring_middle
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_ring_carpal/left_ring_proximal/left_ring_middle/left_ring_distal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_ring_carpal/left_ring_proximal/left_ring_middle/left_ring_distal/left_ring_tip
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_thumb_carpal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_thumb_carpal/left_thumb_proximal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_thumb_carpal/left_thumb_proximal/left_thumb_middle
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_thumb_carpal/left_thumb_proximal/left_thumb_middle/left_thumb_distal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/left_clavicle_jnt/left_shoulder_jnt/left_elbow_jnt/left_radial_jnt/left_wrist_jnt/left_weapon_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_hand_ctrl
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_index_carpal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_index_carpal/right_index_proximal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_index_carpal/right_index_proximal/right_index_middle
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_index_carpal/right_index_proximal/right_index_middle/right_index_distal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_index_carpal/right_index_proximal/right_index_middle/right_index_distal/right_index_tip
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_middle_carpal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_middle_carpal/right_middle_proximal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_middle_carpal/right_middle_proximal/right_middle_middle
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_middle_carpal/right_middle_proximal/right_middle_middle/right_middle_distal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_middle_carpal/right_middle_proximal/right_middle_middle/right_middle_distal/right_middle_tip
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_pinky_carpal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_pinky_carpal/right_pinky_proximal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_pinky_carpal/right_pinky_proximal/right_pinky_middle
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_pinky_carpal/right_pinky_proximal/right_pinky_middle/right_pinky_distal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_pinky_carpal/right_pinky_proximal/right_pinky_middle/right_pinky_distal/right_pinky_tip
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_ring_carpal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_ring_carpal/right_ring_proximal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_ring_carpal/right_ring_proximal/right_ring_middle
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_ring_carpal/right_ring_proximal/right_ring_middle/right_ring_distal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_ring_carpal/right_ring_proximal/right_ring_middle/right_ring_distal/right_ring_tip
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_thumb_carpal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_thumb_carpal/right_thumb_proximal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_thumb_carpal/right_thumb_proximal/right_thumb_middle
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_thumb_carpal/right_thumb_proximal/right_thumb_middle/right_thumb_distal
+        weight: 1
+      - path: total_ctrl/master_root/pelvic_jnt/sacral_jnt_1/sacral_jnt_2/lumbar_jnt_1/lumbar_jnt_2/lumbar_jnt_3/thoracic_jnt_1/thoracic_jnt_2/thoracic_jnt_3/cervical_jnt_1/cervical_jnt_2/right_clavicle_jnt/right_shoulder_jnt/right_elbow_jnt/right_radial_jnt/right_wrist_jnt/right_weapon_jnt
+        weight: 1
+      - path: total_ctrl/pelvic_ctrl
+        weight: 1
+      - path: total_ctrl/pelvic_ctrl/pelvic_override_ctrl
+        weight: 1
+      - path: total_ctrl/right_arm_ctrl
+        weight: 1
+      - path: total_ctrl/right_arm_ik
+        weight: 1
+      - path: total_ctrl/right_elbow_pole_vector
+        weight: 1
+      - path: total_ctrl/right_knee_pole_vector
+        weight: 1
+      - path: total_ctrl/right_leg_ctrl
+        weight: 1
+      - path: total_ctrl/right_leg_ctrl/right_reverse_heel
+        weight: 1
+      - path: total_ctrl/right_leg_ctrl/right_reverse_heel/right_reverse_toe
+        weight: 1
+      - path: total_ctrl/right_leg_ctrl/right_reverse_heel/right_reverse_toe/right_reverse_ball
+        weight: 1
+      - path: total_ctrl/right_leg_ctrl/right_reverse_heel/right_reverse_toe/right_reverse_ball/right_ball_ik
+        weight: 1
+      - path: total_ctrl/right_leg_ctrl/right_reverse_heel/right_reverse_toe/right_reverse_ball/right_reverse_ankle
+        weight: 1
+      - path: total_ctrl/right_leg_ctrl/right_reverse_heel/right_reverse_toe/right_reverse_ball/right_reverse_ankle/right_ankle_ik
+        weight: 1
+      - path: total_ctrl/right_leg_ctrl/right_reverse_heel/right_reverse_toe/right_toe_ik
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
