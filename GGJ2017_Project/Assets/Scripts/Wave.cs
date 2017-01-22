@@ -23,11 +23,11 @@ public class Wave : MonoBehaviour {
     public int framesAlive = 0;
 
     public float chromeMax = 10f;
-    public float fishMax = 0.4f;
+    public float chromeCompression = 1f;
+    public float chromeCompDecay = 0.05f;
 
     private Camera playerCamera;
     private VignetteAndChromaticAberration chromeAb;
-    private Fisheye fisheye;
 
     // Resource acquisition
     void Awake ()
@@ -39,7 +39,8 @@ public class Wave : MonoBehaviour {
 	void Start ()
     {
         life = initialLife;
-        playerCamera = GameObject.FindGameObjectWithTag("Player").GetComponent<Camera>();
+        playerCamera = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Camera>();
+        chromeAb = playerCamera.GetComponent<VignetteAndChromaticAberration>();
     }
 	
 	// Update is called once per frame
@@ -47,8 +48,16 @@ public class Wave : MonoBehaviour {
     {
         waveCollider.radius += rateOfExpansion * Time.deltaTime;
 
+        chromeAb.chromaticAberration = (chromeMax - (framesAlive * chromeCompDecay)) 
+            * Mathf.Sin(framesAlive * (chromeCompression + (framesAlive * chromeCompDecay)));
+
         life -= Time.deltaTime; framesAlive++;
-        if(life <= 0.0f) Destroy(this.gameObject);
+        if (life <= 0.0f)
+        {
+            chromeAb.chromaticAberration = 0f;
+
+            Destroy(this.gameObject);
+        }
 	}
 
     // This applies a force that decays based on the distance it is applied from
