@@ -13,6 +13,12 @@ public class WaveField : MonoBehaviour {
     {
         terrain = GetComponent<Terrain>();
     }
+
+    void Start()
+    {
+        data.heightmapResolution = 129;
+        ResetHeightmap();
+    }
 	
     void OnTriggerStay(Collider other)
     {
