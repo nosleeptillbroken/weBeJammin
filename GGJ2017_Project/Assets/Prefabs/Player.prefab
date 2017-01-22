@@ -63,21 +63,10 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-<<<<<<< HEAD
-  - 4: {fileID: 4000012686573122}
-  - 54: {fileID: 54000010846113786}
-  - 136: {fileID: 136000012868382836}
-  - 136: {fileID: 136000013737099988}
-  - 114: {fileID: 114000013907011104}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Player
-=======
   - 4: {fileID: 4000012736124154}
   m_Layer: 0
   m_Name: right_index_distal
   m_TagString: Untagged
->>>>>>> feature/Animation_Development
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2471,23 +2460,6 @@ Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 4000013752077178}
-  - 33: {fileID: 33000011487403722}
-  - 23: {fileID: 23000010220258858}
-  m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1000014259228190
-GameObject:
-  m_ObjectHideFlags: 0
-=======
   m_GameObject: {fileID: 1000013977336418}
   m_LocalRotation: {x: 0.6885608, y: 0.30786234, z: 0.5994012, w: -0.2679982}
   m_LocalPosition: {x: -0.28928, y: -0.198761, z: 0.645406}
@@ -2500,7 +2472,6 @@ GameObject:
 --- !u!4 &4000013659211998
 Transform:
   m_ObjectHideFlags: 1
->>>>>>> feature/Animation_Development
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010195783512}
@@ -2530,17 +2501,10 @@ Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1000012852413176}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21, y: 6, z: 22.03}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-=======
   m_GameObject: {fileID: 1000010129517570}
   m_LocalRotation: {x: 0.8910101, y: -0.45398358, z: -2.779848e-17, w: 5.4558633e-17}
   m_LocalPosition: {x: -0.326553, y: 0, z: 0}
   m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
->>>>>>> feature/Animation_Development
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000010092508002}
@@ -2916,25 +2880,6 @@ SkinnedMeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012616755468}
   m_Enabled: 1
-<<<<<<< HEAD
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136000013737099988
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012852413176}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.7
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
-=======
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -3057,4 +3002,3 @@ CapsuleCollider:
     m_Center: {x: 0.097696066, y: -0.054800034, z: 0.5937805}
     m_Extent: {x: 4.3291454, y: 9.400482, z: 3.6888905}
   m_DirtyAABB: 0
->>>>>>> feature/Animation_Development
