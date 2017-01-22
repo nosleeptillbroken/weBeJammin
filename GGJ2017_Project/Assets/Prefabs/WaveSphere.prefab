@@ -82,11 +82,9 @@ MonoBehaviour:
   rateOfExpansion: 16
   waveCollider: {fileID: 0}
   framesAlive: 0
-  chromeMax: 20
-  fishMax: 0.2
-  fishCompression: 0.2
-  chromeCompression: 0.05
-  chromeCompDecay: 0.05
+  chromeMax: 80
+  chromeCompression: 0.03
+  chromeCompDecay: 0.01
 --- !u!135 &135000013097896292
 SphereCollider:
   m_ObjectHideFlags: 1

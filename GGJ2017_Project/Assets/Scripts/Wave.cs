@@ -48,7 +48,7 @@ public class Wave : MonoBehaviour {
     {
         waveCollider.radius += rateOfExpansion * Time.deltaTime;
 
-        chromeAb.chromaticAberration = (chromeMax - (framesAlive * chromeCompDecay)) 
+        chromeAb.chromaticAberration = ((chromeMax - (framesAlive * chromeCompDecay)) * (rateOfExpansion / 40f)) 
             * Mathf.Sin(framesAlive * (chromeCompression + (framesAlive * chromeCompDecay)));
 
         life -= Time.deltaTime; framesAlive++;
