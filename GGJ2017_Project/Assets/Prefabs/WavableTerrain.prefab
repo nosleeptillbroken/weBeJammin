@@ -24,7 +24,7 @@ GameObject:
   - 114: {fileID: 114000012076921154}
   - 65: {fileID: 65000013253696118}
   m_Layer: 12
-  m_Name: Terrain
+  m_Name: WavableTerrain
   m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
