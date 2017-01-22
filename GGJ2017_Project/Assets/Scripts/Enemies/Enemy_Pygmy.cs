@@ -10,6 +10,7 @@ public class Enemy_Pygmy : MonoBehaviour
 
     //External References.
     Transform player;
+    PlayerController playerScript;
     Transform target;
     public Transform home;
     public bool isHome;
@@ -27,7 +28,7 @@ public class Enemy_Pygmy : MonoBehaviour
     public int playerRegion;
 
     //Metrics.
-    private float movSpeed = 4;
+    public float movSpeed;
     private float rotSpeed = 2;
     private float movStep;
     private float rotStep;
@@ -40,9 +41,7 @@ public class Enemy_Pygmy : MonoBehaviour
 
         //External references set.
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-
-        //Calculate where to move to.
-        playerRegion = 2;
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 	
 	
@@ -54,6 +53,7 @@ public class Enemy_Pygmy : MonoBehaviour
         playerLocat = player.position;
         toPlayer = playerLocat - tf.position;
         toHome = home.position - tf.position;
+        playerRegion = playerScript.playerRegion;
 
         //If the player is present, move to the player.
         if (playerRegion == myRegion) {

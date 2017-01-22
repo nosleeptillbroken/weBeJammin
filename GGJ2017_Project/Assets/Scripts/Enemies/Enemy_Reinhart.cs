@@ -10,6 +10,7 @@ public class Enemy_Reinhart : MonoBehaviour
     //External References.
     Transform player;
     Transform target;
+    PlayerController playerScript;
 
     //Vector Calculations.
     Vector3 playerLocat;
@@ -22,8 +23,8 @@ public class Enemy_Reinhart : MonoBehaviour
     public int playerRegion;
 
     //Metrics.
-    private float movSpeed = 2;
-    private float rotSpeed = 1;
+    private float movSpeed = 4;
+    private float rotSpeed = 2;
     private float movStep;
     private float rotStep;
 
@@ -35,9 +36,9 @@ public class Enemy_Reinhart : MonoBehaviour
 
         //External references set.
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-
+        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         //Calculate where to move to.
-        playerRegion = 2;
+
     }
 
 
@@ -48,6 +49,7 @@ public class Enemy_Reinhart : MonoBehaviour
         rotStep = Time.deltaTime * rotSpeed;
         playerLocat = player.position;
         toPlayer = playerLocat - tf.position;
+        playerRegion = playerScript.playerRegion;
 
         //For now, player is always target.
         target = player;
