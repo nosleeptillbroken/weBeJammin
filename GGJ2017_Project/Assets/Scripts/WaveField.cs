@@ -19,27 +19,25 @@ public class WaveField : MonoBehaviour {
         Wave waveObject = other.gameObject.GetComponent<Wave>();
         if(waveObject != null)
         {
-            float pi2 = Mathf.PI * 2;
-            float stepSize = 0.05f;
-            
+            float PI_2 = Mathf.PI * 2;
+            float stepSize = 0.1f;
+
+            float totalRadius = waveObject.waveCollider.radius * 0.75f;
+
             float[,] heightmap = data.GetHeights(0, 0, data.heightmapWidth, data.heightmapHeight);
 
-            int waveFrames = Mathf.Max(waveObject.framesAlive, 4);
+            int waveFrames = Mathf.Min(waveObject.framesAlive, 16);
 
             float normalizedLife = Mathf.Clamp01(Mathf.Log(waveObject.life) + 1.1f) / waveObject.initialLife;
 
-            for (int i = 0; i < waveFrames; i++)
+            for (int i = 1; i <= waveFrames; i++)
             {
                 float percentageOfFrames = ((float)i / (float)waveFrames);
-
-                float totalRadius = waveObject.waveCollider.radius * 0.75f;
                 float currentRadius = percentageOfFrames * totalRadius;
 
-                float waveHeight = Mathf.Cos(percentageOfFrames * Mathf.PI*2f)/2;
-                waveHeight *= normalizedLife;
-                waveHeight += 0.5f;
+                float waveHeight = 0.5f + (0.5f * Mathf.Cos(percentageOfFrames * PI_2) * normalizedLife);
 
-                for (float theta = 0; theta < pi2; theta += stepSize)
+                for (float theta = 0; theta < PI_2; theta += stepSize)
                 {
                     float x = currentRadius * Mathf.Cos(theta);
                     float z = currentRadius * Mathf.Sin(theta);
@@ -86,7 +84,6 @@ public class WaveField : MonoBehaviour {
         Vector3 coord;
 
         coord.x = tempCoord.x / terrain.terrainData.size.x;
-        coord.y = tempCoord.y / terrain.terrainData.size.y;
         coord.z = tempCoord.z / terrain.terrainData.size.z;
 
         int[] finalCoord = { (int)(coord.x * terrain.terrainData.heightmapWidth), (int)(coord.z * terrain.terrainData.heightmapHeight) };
