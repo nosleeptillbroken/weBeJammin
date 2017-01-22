@@ -95,6 +95,8 @@ public class PlayerController : MonoBehaviour
             Vector3 v = other.GetComponent<Rigidbody>().velocity;
 
             Debug.Log(Vector3.Angle(d, v));
+            if (Vector3.Dot(d, v) <= 0)
+                Debug.Log("Killem");
         }
     }
 
