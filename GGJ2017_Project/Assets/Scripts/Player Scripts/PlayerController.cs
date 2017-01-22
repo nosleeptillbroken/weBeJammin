@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
     {
         IsGrounded();
         anim.SetFloat("Speed",player.GetAxis("Move"));
+        anim.SetFloat("Speed", player.GetAxis("Strafe"));
         anim.SetBool("isJumping",IsGrounded());
     }
 
