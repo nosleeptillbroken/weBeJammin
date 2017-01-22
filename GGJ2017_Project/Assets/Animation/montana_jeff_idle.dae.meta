@@ -1,0 +1,191 @@
+fileFormatVersion: 2
+guid: e662798dbe76d0e40b6361b985f9edea
+timeCreated: 1485074413
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: cervical_jnt_1
+    100002: cervical_jnt_2
+    100004: head_base
+    100006: left_ankle_jnt
+    100008: left_ball_jnt
+    100010: left_clavicle
+    100012: left_elbow_jnt
+    100014: left_hand_distal
+    100016: left_hand_knuckle
+    100018: left_hand_middle
+    100020: left_hand_proximal
+    100022: left_hip_jnt
+    100024: left_index_distal
+    100026: left_index_knuckle
+    100028: left_index_middle
+    100030: left_index_proximal
+    100032: left_index_tip
+    100034: left_knee_jnt
+    100036: left_shoulder_jnt
+    100038: left_thumb_distal
+    100040: left_thumb_middle
+    100042: left_thumb_proximal
+    100044: left_toe_jnt
+    100046: left_wrist_jnt
+    100048: lumbar_jnt_1
+    100050: lumbar_jnt_2
+    100052: master_root
+    100054: //RootNode
+    100056: montana_jeff_polySurface1
+    100058: neck_base
+    100060: orbital
+    100062: pelvic_ctrl
+    100064: pelvic_override
+    100066: pelvic_override_ncl1_1
+    100068: right_ankle_jnt
+    100070: right_ball_jnt
+    100072: right_clavicle
+    100074: right_elbow_jnt
+    100076: right_hand_distal
+    100078: right_hand_knuckle
+    100080: right_hand_middle
+    100082: right_hand_proximal
+    100084: right_hip_jnt
+    100086: right_index_distal
+    100088: right_index_knuckle
+    100090: right_index_middle
+    100092: right_index_proximal
+    100094: right_index_tip
+    100096: right_knee_jnt
+    100098: right_shoulder_jnt
+    100100: right_thumb_distal
+    100102: right_thumb_middle
+    100104: right_thumb_proximal
+    100106: right_toe_jnt
+    100108: right_wrist_jnt
+    100110: sacral_jnt
+    100112: sacral_jnt_2
+    100114: thoracic_jnt_1
+    400000: cervical_jnt_1
+    400002: cervical_jnt_2
+    400004: head_base
+    400006: left_ankle_jnt
+    400008: left_ball_jnt
+    400010: left_clavicle
+    400012: left_elbow_jnt
+    400014: left_hand_distal
+    400016: left_hand_knuckle
+    400018: left_hand_middle
+    400020: left_hand_proximal
+    400022: left_hip_jnt
+    400024: left_index_distal
+    400026: left_index_knuckle
+    400028: left_index_middle
+    400030: left_index_proximal
+    400032: left_index_tip
+    400034: left_knee_jnt
+    400036: left_shoulder_jnt
+    400038: left_thumb_distal
+    400040: left_thumb_middle
+    400042: left_thumb_proximal
+    400044: left_toe_jnt
+    400046: left_wrist_jnt
+    400048: lumbar_jnt_1
+    400050: lumbar_jnt_2
+    400052: master_root
+    400054: //RootNode
+    400056: montana_jeff_polySurface1
+    400058: neck_base
+    400060: orbital
+    400062: pelvic_ctrl
+    400064: pelvic_override
+    400066: pelvic_override_ncl1_1
+    400068: right_ankle_jnt
+    400070: right_ball_jnt
+    400072: right_clavicle
+    400074: right_elbow_jnt
+    400076: right_hand_distal
+    400078: right_hand_knuckle
+    400080: right_hand_middle
+    400082: right_hand_proximal
+    400084: right_hip_jnt
+    400086: right_index_distal
+    400088: right_index_knuckle
+    400090: right_index_middle
+    400092: right_index_proximal
+    400094: right_index_tip
+    400096: right_knee_jnt
+    400098: right_shoulder_jnt
+    400100: right_thumb_distal
+    400102: right_thumb_middle
+    400104: right_thumb_proximal
+    400106: right_toe_jnt
+    400108: right_wrist_jnt
+    400110: sacral_jnt
+    400112: sacral_jnt_2
+    400114: thoracic_jnt_1
+    4300000: montana_jeff_polySurface1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: montana_jeff_polySurface1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
