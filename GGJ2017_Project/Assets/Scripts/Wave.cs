@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityStandardAssets.ImageEffects;
 using System.Collections;
 
 public class Wave : MonoBehaviour {
@@ -21,6 +22,13 @@ public class Wave : MonoBehaviour {
     //
     public int framesAlive = 0;
 
+    public float chromeMax = 10f;
+    public float fishMax = 0.4f;
+
+    private Camera playerCamera;
+    private VignetteAndChromaticAberration chromeAb;
+    private Fisheye fisheye;
+
     // Resource acquisition
     void Awake ()
     {
@@ -31,6 +39,7 @@ public class Wave : MonoBehaviour {
 	void Start ()
     {
         life = initialLife;
+        playerCamera = GameObject.FindGameObjectWithTag("Player").GetComponent<Camera>();
     }
 	
 	// Update is called once per frame
