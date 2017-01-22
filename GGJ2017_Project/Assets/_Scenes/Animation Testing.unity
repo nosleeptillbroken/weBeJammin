@@ -90,7 +90,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &153876673
+--- !u!1001 &464194645
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -103,7 +103,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012686573122, guid: 76e151bdaa5ba9340a7f885c72bf18cd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4000012686573122, guid: 76e151bdaa5ba9340a7f885c72bf18cd, type: 2}
       propertyPath: m_LocalPosition.z
