@@ -70,6 +70,20 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(0f, player.GetAxis("Pan") * xSpeed * Time.deltaTime, 0f);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+            Debug.Log("Killem");
+
+        if (other.CompareTag("Boulder"))
+        {
+            Vector3 d = transform.position - other.transform.position;
+            Vector3 v = other.GetComponent<Rigidbody>().velocity;
+
+            Debug.Log(Vector3.Angle(d, v));
+        }
+    }
+
     bool IsGrounded()
     {
         return Physics.Raycast(transform.position, Vector3.down, 1.1f, LayerMask.GetMask("Terrain"));
