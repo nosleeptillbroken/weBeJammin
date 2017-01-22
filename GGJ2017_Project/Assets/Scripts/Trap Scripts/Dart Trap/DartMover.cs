@@ -15,10 +15,6 @@ public class DartMover : MonoBehaviour {
 
     void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.tag == "Player")
-        {
-            Destroy(other.gameObject);
-        }
         Destroy(this.gameObject);
     }
 }

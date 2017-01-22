@@ -136,8 +136,7 @@ public class PlayerController : MonoBehaviour
         // Hit an enemy?
         if (other.CompareTag("Enemy"))
         { 
-            StartCoroutine(killMe());
-            transform.GetComponent<Rigidbody>().freezeRotation = false;
+            StartCoroutine(KillMe());
         }
 
         // Hit a boulder?
@@ -148,8 +147,7 @@ public class PlayerController : MonoBehaviour
 
             if ((Vector3.Angle(d, v)) < 90)
             {
-                StartCoroutine(killMe());
-                transform.GetComponent<Rigidbody>().freezeRotation = false;
+                StartCoroutine(KillMe());
             }
         }
 
@@ -159,8 +157,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    IEnumerator killMe()
+    IEnumerator KillMe()
     {
+        transform.GetComponent<Rigidbody>().freezeRotation = false;
         yield return new WaitForSeconds(deathWait);
         SceneManager.LoadScene("Game_Over");
     }

@@ -24,6 +24,7 @@ GameObject:
   - 23: {fileID: 23000013299332572}
   - 54: {fileID: 54000013701850210}
   - 114: {fileID: 114000014148185126}
+  - 114: {fileID: 114000014223614946}
   m_Layer: 0
   m_Name: Dart
   m_TagString: Untagged
@@ -106,6 +107,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d0957e559e527e4bacdc96d1734a36e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000014223614946
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012402650396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ebe8fce24f42c84e9fbf3ba6161a630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killPlayers: 1
+  killEnemies: 1
 --- !u!136 &136000010803375220
 CapsuleCollider:
   m_ObjectHideFlags: 1
