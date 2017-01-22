@@ -22,6 +22,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float deathWait = 5f;
 
+    private float minVibeAmt = 0.25f;
+    private float maxVibeAmt = 0.66f;
+    private float ultWaveVibe = 0.8f;
+
+
     void Awake()
     {
         // Get the Rewired Player object for this player and keep it for the duration of the character's lifetime
@@ -46,20 +51,55 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("isJumping",IsGrounded());
     }
 
+    public void StopVibration()
+    {
+        // Set vibration for a certain duration
+        foreach (Joystick j in player.controllers.Joysticks)
+        {
+            if (!j.supportsVibration) continue;
+            if (j.vibrationMotorCount > 0) j.SetVibration(0f, 0f); // 1 second duration
+        }
+    }
 
     void JumpCounter()
     {
+
         if (isJumping)
         {
-            jumpTime += (Time.deltaTime * 10);
+            jumpTime += (Time.deltaTime * 15);
             jumpTime = Mathf.Clamp(jumpTime, 0f, maxJumpTime);
+
+            if (jumpTime < 40f)
+            {
+                float vibAmt = Mathf.PingPong(minVibeAmt, maxVibeAmt);
+                // Set vibration for a certain duration
+                foreach (Joystick j in player.controllers.Joysticks)
+                {
+                    if (!j.supportsVibration) continue;
+                    if (j.vibrationMotorCount > 0) j.SetVibration(vibAmt, vibAmt); // ping pong between two values controller via vibAmt
+                }
+            }
+            else
+            {
+                // Set vibration for a certain duration
+                foreach (Joystick j in player.controllers.Joysticks)
+                {
+                    if (!j.supportsVibration) continue;
+                    if (j.vibrationMotorCount > 0) j.SetVibration(ultWaveVibe, ultWaveVibe); // go all out when you hit wave cap
+                }
+            }
+
+            
         }
     }
+
     private void ProcessInput()
     {
+        
         Vector3 MoveAxis = Vector3.forward + Vector3.right;
         Vector3 Move = ((transform.right * player.GetAxis("Strafe")) * moveSpeed) + ((transform.forward * player.GetAxis("Move")) * moveSpeed);
         Move.y = GetComponent<Rigidbody>().velocity.y;
+
 
         if (player.GetButtonDown("Jump") && IsGrounded()) //player jumps
         {
@@ -67,10 +107,12 @@ public class PlayerController : MonoBehaviour
         }
         if (player.GetButtonUp("Jump") && IsGrounded())
         {
+            StopVibration();
             isJumping = false;
             Move.y = 10.0f;
             GameObject newWaveObject = Instantiate(wavePrefab, (transform.position - Vector3.up), transform.rotation) as GameObject;
             Wave wave = newWaveObject.GetComponent<Wave>();
+            
             
             if (jumpTime <= 1.2f)
             {
