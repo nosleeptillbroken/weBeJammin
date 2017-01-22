@@ -15,16 +15,30 @@ public class PlayerController : MonoBehaviour
 
     public GameObject wavePrefab;
 
+    private Animator anim;
+
     void Awake()
     {
         // Get the Rewired Player object for this player and keep it for the duration of the character's lifetime
         player = ReInput.players.GetPlayer(playerId);
     }
 
+    void Start()
+    {
+        anim = GetComponentInChildren<Animator>();
+    }
+
     void FixedUpdate()
     {
         ProcessInput();
         JumpCounter();
+    }
+
+    void Update()
+    {
+        IsGrounded();
+        anim.SetFloat("Speed",player.GetAxis("Move"));
+        anim.SetBool("isJumping",IsGrounded());
     }
 
 
