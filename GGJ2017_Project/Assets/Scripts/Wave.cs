@@ -46,7 +46,7 @@ public class Wave : MonoBehaviour {
     private void OnTriggerStay(Collider other)
     {
         // Only apply to some objects
-        if (other.CompareTag("Boulder"))
+        if (other.CompareTag("Boulder") || other.CompareTag("Enemy"))
         {
             // Get normalized direction to apply force in
             Vector3 dir = (other.transform.position - transform.position);
@@ -59,5 +59,6 @@ public class Wave : MonoBehaviour {
             // Apply this force to the other thing
             other.GetComponent<Rigidbody>().AddForce(dir * maxForce * linDecay);
         }
+
     }
 }
