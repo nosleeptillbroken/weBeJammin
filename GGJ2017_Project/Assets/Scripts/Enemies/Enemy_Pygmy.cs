@@ -27,8 +27,8 @@ public class Enemy_Pygmy : MonoBehaviour
     public int playerRegion;
 
     //Metrics.
-    private float movSpeed = 2;
-    private float rotSpeed = 1;
+    private float movSpeed = 4;
+    private float rotSpeed = 2;
     private float movStep;
     private float rotStep;
 	
